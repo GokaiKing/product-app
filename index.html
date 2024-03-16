@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product App</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
 </head>
 <body>
-    
+    <nav class = "navbar navbar-light bg-dark">
+        <a href="/" class = "navbar-brand">
+            Product App
+        </a>
+    </nav>
+
+    <div class = "container">
+        <div id = "app" class = "row pt-5">
+            <div class = "col-md-4">
+                <div class = "card">
+                    <div class = "card-header bg-dark">
+                        <h4>Add a product</h4>
+                    </div>
+                    <form id="product-form" class = "card-body">
+                        <div class = "form-group">
+                            <label>Product name</label>
+                            <input type="text" id="name" placeholder="Name" class="form-control">
+                        </div>
+                        <div class = "form-group">
+                            <label>Product cost per-piece</label>
+                            <input type="number" id="price" step="0.01" placeholder="Price"  class="form-control">
+                        </div>
+                        <div class = "form-group">
+                            <label>Product quantity</label>
+                            <input type="number" id="quantity" placeholder="Quantity" class="form-control">
+                        </div>
+                        <div class = "form-group">
+                            <label>Product date</label>
+                            <input type="text" id="year" class="form-control">
+                        </div>
+                        <input type="button" value = "Save" class="btn btn-primary btn-block bg-dark">
+                    </form>
+                </div>
+            </div>
+            <div id ="product-list" class="col-md-8"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
